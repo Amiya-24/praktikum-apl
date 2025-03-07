@@ -212,14 +212,14 @@ int main() {
                     cout << "Pilihan Tidak Valid" << endl;
                 }
         
-        } else if (pilih == "5") {
-            cout << "Program Dihentikan." << endl;
-            exit(0);
-        }
-        else {
-            cout << "Pilihan Tidak Valid" << endl;
-            break;
-        }
+            } else if (pilih == "5") {
+                cout << "Program Dihentikan." << endl;
+                exit(0);
+            }
+            else {
+                cout << "Pilihan Tidak Valid" << endl;
+                break;
+            }
         }
         
     }
