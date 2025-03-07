@@ -10,20 +10,26 @@ int main() {
     int percobaan = 0;
 
     while (percobaan < 3) {
-        cout << "Masukkan Username Anda: ";
+        cout << "<=================================>" << endl;
+        cout << "|              Login              |" << endl;
+        cout << "<=================================>" << endl;
+        cout << "   Masukkan Username Anda: ";
         cin >> login_username;
-        cout << "Masukkan Password Anda: ";
+        cout << "   Masukkan Password Anda: ";
         cin >> login_password;
+        cout << "<================================>" << endl;
 
         if (login_username == username && login_password == password) {
-            cout << "Login Berhasil!" << endl;
+            cout << "   Login Berhasil!" << endl;
             break;
 
         } else {
-            cout << "Username atau Password Salah. Silahkan Coba Lagi\n" << endl;
+            cout << "   Username atau Password Salah. " << endl;
+            cout << "   Silahkan Coba Lagi.\n" << endl;
             percobaan++;
             if (percobaan == 3) {
-                cout << "Percobaan Login Telah Habis. Program Di Hentikan.";
+                cout << "   Percobaan Login Telah Habis." << endl; 
+                cout << "   Program Di Hentikan." << endl;
                 exit(0);
             }
         }
@@ -31,13 +37,16 @@ int main() {
 
     // Program Konversi Suhu
     while (true) {
-        cout << "\nProgram Konversi Suhu" << endl;
-        cout << "1. Celcius" << endl;
-        cout << "2. Fahrenheit" << endl;
-        cout << "3. Reamur" << endl;
-        cout << "4. Kelvin" << endl;
-        cout << "5. Keluar" << endl;
-        cout << "Pilih Jenis Suhu Awal: ";
+        cout << "\n<==========================>" << endl;
+        cout << "|  Program Konversi Suhu   |" << endl;
+        cout << "|==========================|" << endl;
+        cout << "|  1. Celcius              |" << endl;
+        cout << "|  2. Fahrenheit           |" << endl;
+        cout << "|  3. Reamur               |" << endl;
+        cout << "|  4. Kelvin               |" << endl;
+        cout << "|  5. Keluar               |" << endl;
+        cout << "<==========================>" << endl;
+        cout << "Pilih Jenis Suhu Yang Ingin Di Konversi: ";
         
         string pilih;
         cin >> pilih;
@@ -47,12 +56,15 @@ int main() {
                 cout << "Masukkan Suhu dalam Celcius(C): ";
                 double celcius;
                 cin >> celcius;
-
-                cout << "\nKonversi Menjadi" << endl;
-                cout << "1. Fahrenheit" << endl;
-                cout << "2. Reamur" << endl;
-                cout << "3. Kelvin" << endl;
-                cout << "4. Kembali" << endl;
+                
+                cout << "\n<==========================>" << endl;
+                cout << "|  Konversi Menjadi        |" << endl;
+                cout << "|==========================|" << endl;
+                cout << "|  1. Fahrenheit           |" << endl;
+                cout << "|  2. Reamur               |" << endl;
+                cout << "|  3. Kelvin               |" << endl;
+                cout << "|  4. Kembali              |" << endl;
+                cout << "<==========================>" << endl;
                 cout << "Pilih Jenis Konversi: ";
                 
                 string pilih_konversi;
@@ -77,7 +89,7 @@ int main() {
                     break;
     
                 } else {
-                    cout << "Pilihan Tidak Valid." << endl;
+                    cout << "Pilihan Tidak Valid" << endl;
                 }
             
             } else if (pilih == "2") {
@@ -85,13 +97,16 @@ int main() {
                 double fahrenheit;
                 cin >> fahrenheit;
 
-                cout << "\nKonversi Menjadi" << endl;
-                cout << "1. Celcius" << endl;
-                cout << "2. Reamur" << endl;
-                cout << "3. Kelvin" << endl;
-                cout << "4. Kembali" << endl;
+                cout << "\n<==========================>" << endl;
+                cout << "|  Konversi Menjadi        |" << endl;
+                cout << "|==========================|" << endl;
+                cout << "|  1. Celcius              |" << endl;
+                cout << "|  2. Reamur               |" << endl;
+                cout << "|  3. Kelvin               |" << endl;
+                cout << "|  4. Kembali              |" << endl;
+                cout << "<==========================>" << endl;
                 cout << "Pilih Jenis Konversi: ";
-                
+
                 string pilih_konversi;
                 cin >> pilih_konversi;
                 
@@ -114,7 +129,7 @@ int main() {
                     break;
                     
                 } else {
-                    cout << "Pilihan Tidak Valid." << endl;
+                    cout << "Pilihan Tidak Valid" << endl;
                 }
 
             } else if (pilih == "3") {
@@ -122,11 +137,14 @@ int main() {
                 double reamur;
                 cin >> reamur;
 
-                cout << "\nKonversi Menjadi" << endl;
-                cout << "1. Celcius" << endl;
-                cout << "2. Fahrenheit" << endl;
-                cout << "3. Kelvin" << endl;
-                cout << "4. Kembali" << endl;
+                cout << "\n<==========================>" << endl;
+                cout << "|  Konversi Menjadi        |" << endl;
+                cout << "|==========================|" << endl;
+                cout << "|  2. Celcius              |" << endl;
+                cout << "|  1. Fahrenheit           |" << endl;
+                cout << "|  3. Kelvin               |" << endl;
+                cout << "|  4. Kembali              |" << endl;
+                cout << "<==========================>" << endl;
                 cout << "Pilih Jenis Konversi: ";
                 
                 string pilih_konversi;
@@ -151,7 +169,7 @@ int main() {
                     break;
                     
                 } else {
-                    cout << "Pilihan Tidak Valid." << endl;
+                    cout << "Pilihan Tidak Valid" << endl;
                 }
             
             } else if (pilih == "4") {
@@ -159,11 +177,14 @@ int main() {
                 double kelvin;
                 cin >> kelvin;
 
-                cout << "\nKonversi Menjadi" << endl;
-                cout << "1. Celcius" << endl;
-                cout << "2. Fahrenheit" << endl;
-                cout << "3. Reamur" << endl;
-                cout << "4. Kembali" << endl;
+                cout << "\n<==========================>" << endl;
+                cout << "|  Konversi Menjadi        |" << endl;
+                cout << "|==========================|" << endl;
+                cout << "|  2. Celcius              |" << endl;
+                cout << "|  1. Fahrenheit           |" << endl;
+                cout << "|  3. Reamur               |" << endl;
+                cout << "|  4. Kembali              |" << endl;
+                cout << "<==========================>" << endl;
                 cout << "Pilih Jenis Konversi: ";
                 
                 string pilih_konversi;
@@ -188,7 +209,7 @@ int main() {
                     break;
                     
                 } else {
-                    cout << "Pilihan Tidak Valid." << endl;
+                    cout << "Pilihan Tidak Valid" << endl;
                 }
         
         } else if (pilih == "5") {
@@ -196,11 +217,11 @@ int main() {
             exit(0);
         }
         else {
-            cout << "Pilihan Tidak Valid. Silahkan Masukkan Ulang." << endl;
+            cout << "Pilihan Tidak Valid" << endl;
             break;
         }
         }
-        return 0;
+        
     }
     return 0;
 }
