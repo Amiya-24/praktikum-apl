@@ -63,11 +63,11 @@ using namespace std;
 //         switch (pilihan) {
 //         case 1:
 //             if (panjang == 0) {
-//                 cout << "Belum ada buah" << endl;
+//                 cout << "Belum ada buah\n" << endl;
 
 //             } else {
 //                 for (int i = 0; i < panjang; i++) {
-//                 cout << "Buah ke-" << i + 1 << ": " << buah[i] << endl;
+//                 cout << "Buah ke-" << i + 1 << ": " << buah[i] << "\n" << endl;
 //                 }
 //             }
 //             break;
@@ -148,113 +148,113 @@ using namespace std;
 //  return 0;
 // }
 
-// //                                                                  Array Dua Dimensi
-// #define MAX_BUAH 100 // Ukuran maksimum array buah
-// #define INFO 2 // Kolom untuk menyimpan informasi tambahan (misal: nama dan kategori)
-// int main() {
-//     int panjang = 0; // Jumlah elemen saat ini
-//     string buah[MAX_BUAH][INFO]; // Array 2 dimensi
-//     int pilihan, index;
+//                                                                  Array Dua Dimensi
+#define MAX_BUAH 100 // Ukuran maksimum array buah
+#define INFO 2 // Kolom untuk menyimpan informasi tambahan (misal: nama dan kategori)
+int main() {
+    int panjang = 0; // Jumlah elemen saat ini
+    string buah[MAX_BUAH][INFO]; // Array 2 dimensi
+    int pilihan, index;
 
-//     do {
-//         cout << "Menu Program" << endl;
-//         cout << "1. Tampilkan Buah" << endl;
-//         cout << "2. Tambah Buah" << endl;
-//         cout << "3. Ubah Buah" << endl;
-//         cout << "4. Hapus Buah" << endl;
-//         cout << "5. Keluar" << endl;
-//         cout << "Pilihan: ";
-//         cin >> pilihan;
-//         system("clear");
+    do {
+        cout << "Menu Program" << endl;
+        cout << "1. Tampilkan Buah" << endl;
+        cout << "2. Tambah Buah" << endl;
+        cout << "3. Ubah Buah" << endl;
+        cout << "4. Hapus Buah" << endl;
+        cout << "5. Keluar" << endl;
+        cout << "Pilihan: ";
+        cin >> pilihan;
+        system("clear");
     
-//         switch (pilihan) {
-//         case 1:
-//             if (panjang == 0) {
-//                 cout << "Belum ada buah" << endl;
+        switch (pilihan) {
+        case 1:
+            if (panjang == 0) {
+                cout << "Belum ada buah" << endl;
             
-//             } else {
-//                 for (int i = 0; i < panjang; i++) {
-//                     cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1] << ")" << endl;
-//                 }
-//             }
-//             break;
+            } else {
+                for (int i = 0; i < panjang; i++) {
+                    cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1] << ")" << endl;
+                }
+            }
+            break;
 
-//         case 2:
-//             if (panjang < MAX_BUAH) {
-//                 cout << "Masukkan nama buah: ";
-//                 cin.ignore();
-//                 getline(cin, buah[panjang][0]);
-//                 cout << "Masukkan kategori buah: ";
-//                 getline(cin, buah[panjang][1]);
-//                 panjang++;
-//                 cout << "Buah berhasil ditambahkan" << endl;
+        case 2:
+            if (panjang < MAX_BUAH) {
+                cout << "Masukkan nama buah: ";
+                cin.ignore();
+                getline(cin, buah[panjang][0]);
+                cout << "Masukkan kategori buah: ";
+                getline(cin, buah[panjang][1]);
+                panjang++;
+                cout << "Buah berhasil ditambahkan" << endl;
 
-//             } else {
-//                 cout << "Kapasitas penuh! Tidak bisa menambah buah lagi." << endl;
-//             }
-//             break;
+            } else {
+                cout << "Kapasitas penuh! Tidak bisa menambah buah lagi." << endl;
+            }
+            break;
 
-//         case 3:
-//             if (panjang == 0) {
-//                 cout << "Belum ada buah untuk diubah." << endl;
+        case 3:
+            if (panjang == 0) {
+                cout << "Belum ada buah untuk diubah." << endl;
             
-//             } else {
-//                 for (int i = 0; i < panjang; i++) {
-//                     cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1] << ")" << endl;
-//                 }
-//                 cout << "Masukkan nomor buah yang akan diubah: ";
-//                 cin >> index; 
-//                 if (index > 0 && index <= panjang) {
-//                     cout << "Masukkan nama buah baru: ";
-//                     cin.ignore();
-//                     getline(cin, buah[index - 1][0]);
-//                     cout << "Masukkan kategori baru: ";
-//                     getline(cin, buah[index - 1][1]);
-//                     cout << "Buah berhasil diubah" << endl;
-//                 } else {
-//                     cout << "Nomor buah tidak valid" << endl;
-//                 }
-//             }
-//             break;
+            } else {
+                for (int i = 0; i < panjang; i++) {
+                    cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1] << ")" << endl;
+                }
+                cout << "Masukkan nomor buah yang akan diubah: ";
+                cin >> index; 
+                if (index > 0 && index <= panjang) {
+                    cout << "Masukkan nama buah baru: ";
+                    cin.ignore();
+                    getline(cin, buah[index - 1][0]);
+                    cout << "Masukkan kategori baru: ";
+                    getline(cin, buah[index - 1][1]);
+                    cout << "Buah berhasil diubah" << endl;
+                } else {
+                    cout << "Nomor buah tidak valid" << endl;
+                }
+            }
+            break;
 
-//         case 4:
-//             if (panjang == 0) {
-//                 cout << "Belum ada buah untuk dihapus." << endl;
+        case 4:
+            if (panjang == 0) {
+                cout << "Belum ada buah untuk dihapus." << endl;
             
-//             } else {
-//                 for (int i = 0; i < panjang; i++) {
-//                     cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1]<< ")" << endl;
-//                 }
+            } else {
+                for (int i = 0; i < panjang; i++) {
+                    cout << "Buah ke-" << i + 1 << ": " << buah[i][0] << " (" << buah[i][1]<< ")" << endl;
+                }
                 
-//                 cout << "Masukkan nomor buah yang akan dihapus: ";
-//                 cin >> index;
+                cout << "Masukkan nomor buah yang akan dihapus: ";
+                cin >> index;
                 
-//                 if (index > 0 && index <= panjang) {
-//                     for (int i = index - 1; i < panjang - 1; i++) {
-//                         buah[i][0] = buah[i + 1][0];
-//                         buah[i][1] = buah[i + 1][1];
-//                     }
+                if (index > 0 && index <= panjang) {
+                    for (int i = index - 1; i < panjang - 1; i++) {
+                        buah[i][0] = buah[i + 1][0];
+                        buah[i][1] = buah[i + 1][1];
+                    }
 
-//                     panjang--;
-//                     cout << "Buah berhasil dihapus" << endl;
+                    panjang--;
+                    cout << "Buah berhasil dihapus" << endl;
                 
-//                 } else {
-//                     cout << "Nomor buah tidak valid" << endl;
-//                 }
-//             }
-//             break;
+                } else {
+                    cout << "Nomor buah tidak valid" << endl;
+                }
+            }
+            break;
 
-//         case 5:
-//             cout << "Program selesai" << endl;
-//             break;
+        case 5:
+            cout << "Program selesai" << endl;
+            break;
 
-//         default:
-//             cout << "Pilihan tidak valid" << endl;
-//             break;
-//         }
-//     } while (pilihan != 5);
-//     return 0;
-// }
+        default:
+            cout << "Pilihan tidak valid" << endl;
+            break;
+        }
+    } while (pilihan != 5);
+    return 0;
+}
 
 // //                                                                     Array Multi Dimensi
 // int main() {
@@ -281,4 +281,33 @@ using namespace std;
 //     cout << "Element di [1][1][1]: "<< arr[1][1][1] << endl;
 //     return 0;
 //     }
-    
+
+// //                                                                       Latihan 1
+// int main(int argc, char const * argv[]) {
+//     int number[4] = {1,2,3,4};
+
+//     int totalBytes = sizeof(number);
+//     int singleByte = sizeof(number[0]);
+//     int pamjangArray = sizeof(number) / sizeof(number[0]);
+
+//     cout 
+//         << totalBytes << "\n" 
+//         << singleByte << "\n"
+//         << pamjangArray << "\n";
+
+//         // cout << __cplusplus; // mengecek versi cpp
+
+//     return 0;
+// }
+
+
+// //                                                                       Latihan 2
+// int main(int argc, char const * argv[]){
+//     int number[] = {1,2,3,4,5,6,7,8,9,10};
+//     int totalBytes = sizeof(number);
+//     int pamjangArray = sizeof(number) / sizeof(number[0]);
+
+//     for (int i = 0; i < pamjangArray; i++) {
+//         cout << "Nilai Array " << number[i] << endl;
+//     }
+// }
