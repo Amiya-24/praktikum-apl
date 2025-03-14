@@ -31,10 +31,10 @@ bool tambah_jadwal() {
         cout << "Masukkan Jam Mulai: "; cin >> jadwal_mulai[jumlah_dokter];
         cout << "Masukkan Jam Selesai: "; cin >> jadwal_selesai[jumlah_dokter];
         jumlah_dokter++;
-        cout << "Data berhasil ditambahkan!\n";
+        cout << "Jadwal berhasil ditambahkan!\n";
 
     } else {
-        cout << "Data penuh! Tidak bisa menambahkan lagi.\n";
+        cout << "Jadwal Penuh.\n";
     }
     return 1;
 }
@@ -42,17 +42,17 @@ bool tambah_jadwal() {
 bool ubah_jadwal() {
     tampilkan_jadwal();
     int index;
-    cout << "Masukkan nomor data yang ingin diedit: ";
+    cout << "Pilih Jadwal Yang Ingin Di Ubah: ";
     cin >> index;
     if (index > 0 && index <= jumlah_dokter) {
         cout << "Masukkan Nama Dokter baru: "; cin >> nama_dokter[index - 1];
         cout << "Masukkan Spesialis baru: "; cin >> spesialis[index - 1];
         cout << "Masukkan Jam Mulai baru: "; cin >> jadwal_mulai[index - 1];
         cout << "Masukkan Jam Selesai baru: "; cin >> jadwal_selesai[index - 1];
-        cout << "Data berhasil diperbarui!\n";
+        cout << "Jadwal berhasil diperbarui!\n";
 
     } else {
-        cout << "Nomor data tidak valid!\n";
+        cout << "Jadwal Tidak Valid!\n";
     }
     return 1;
 }
@@ -64,7 +64,7 @@ bool hapus_jadwal() {
         return 0;
 
     } else {
-        cout << "Masukkan nomor data yang ingin dihapus: ";
+        cout << "Pilih Jadwal Yang Ingin Di Hapus: ";
         cin >> index;
         if (index > 0 && index <= jumlah_dokter) {
             for (int i = index - 1; i < jumlah_dokter - 1; i++) {
@@ -74,10 +74,10 @@ bool hapus_jadwal() {
                 jadwal_selesai[i] = jadwal_selesai[i + 1];
             }
             jumlah_dokter--;
-            cout << "Data berhasil dihapus!\n";
+            cout << "Jadwal berhasil dihapus!\n";
 
         } else {
-            cout << "Nomor data tidak valid!\n";
+            cout << "Jadwal Tidak Valid!\n";
         }
     }
     return 1;
@@ -111,7 +111,7 @@ int login(){
                 }
             }
         }else if(pilih == "2"){
-            cout << "Keluar dari sistem.\n";
+            cout << "Keluar dari program.\n";
             exit(0);
         }else {
             cout << "Input Yang Anda Pilih Tidak Valid. Silahkan Coba lagi.\n\n";
