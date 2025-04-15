@@ -152,3 +152,85 @@ using namespace std;
 //     // kalau memberi value pada atribut dari pointer pakai ( -> )
 //     return 0;
 // }
+
+//                                      Latihan
+// struct mahasiswa
+// {
+//     string nama; 
+//     int umur;
+// };
+
+int main (){
+
+    // int prima[6] = {
+    //     2,3,5,7,11,13
+    // };
+
+    // int (*ptr_prima)[6] = &prima;
+
+    //     for (int i =0; i <5; i++){
+    //         cout << *ptr_prima <<endl;
+    //     }
+
+    //     for (int i =0; i <5; i++){
+    //         cout << (*ptr_prima)[i] <<endl;
+    //     }
+
+    //     for (int i =0; i <5; i++){
+    //         cout << (ptr_prima)[i] <<endl;
+    //     }
+
+
+
+
+
+    // mahasiswa mhs;
+    // mhs.nama = "faiz";
+    // mhs.umur = 18;
+
+    // mahasiswa* mhs2 = &mhs;
+
+    // cout << mhs.nama << endl;
+    // cout << mhs2->nama << endl;
+
+
+
+
+    // // * disebut asterisk
+    // // & disebut ampersan
+
+    // int stack = 64;
+    
+    // // cout << "stack " << stack << endl;
+    // // cout << "&stack " << &stack << endl;
+    
+    // // int ptr_stack = 16;
+    // // cout << "ptr_stack " << ptr_stack << endl;
+    // // cout << "&ptr_stack " << &ptr_stack << endl;
+    
+
+    // int *isi = &stack;
+    // cout << stack << endl;
+    // cout << stack << endl;
+    
+    
+    // stack = 32;
+    // cout << isi << endl;
+    // cout << *isi << endl;
+    
+    // *isi = *isi + 10;
+    // cout << isi << endl;
+    // cout << *isi << endl;
+    
+    int stack = 10;
+    int *ptrstack = &stack;
+    int **ptrptrstack = &ptrstack;
+    int ***ptrptrptrstack = &ptrptrstack;
+
+    cout << *ptrstack << endl;
+    cout << **ptrptrstack << endl;
+    cout << ***ptrptrptrstack << endl;
+
+
+    return 0;
+}
