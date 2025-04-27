@@ -246,7 +246,7 @@ void sorting_jadwal() {
         switch (pilih) {
             case 1:
                 sort_nama(jadwal_praktek, 0, jumlah_dokter - 1, true);
-                cout << "Produk diurutkan berdasarkan nama (asc).\n";
+                cout << "Produk diurutkan berdasarkan nama (asccending).\n";
                 break;
             case 2:
                 sort_nama(jadwal_praktek, 0, jumlah_dokter - 1, false);
@@ -254,7 +254,7 @@ void sorting_jadwal() {
                 break;
             case 3:
                 sort_jam(jadwal_praktek, 0, jumlah_dokter - 1, true);
-                cout << "Produk diurutkan berdasarkan Jam Mulai (asc).\n";
+                cout << "Produk diurutkan berdasarkan Jam Mulai (ascending).\n";
                 break;
             case 4:
                 sort_jam(jadwal_praktek, 0, jumlah_dokter - 1, false);
@@ -298,13 +298,13 @@ void sort_jam(jadwal_dokter arr[], int low, int high, bool asc) {
     }
 }
 
-void sort_nama(jadwal_dokter arr[], int low, int high, bool ascending) {
+void sort_nama(jadwal_dokter arr[], int low, int high, bool asc) {
     if (low < high) {
         int pivot = low;
         int i = low;
         int j = high;
         while (i <= j) {
-            if (ascending) {
+            if (asc) {
                 while (arr[i].nama_dokter <= arr[pivot].nama_dokter && i <= high) i++;
                 while (arr[j].nama_dokter > arr[pivot].nama_dokter && j >= low) j--;
             } else {
@@ -314,8 +314,8 @@ void sort_nama(jadwal_dokter arr[], int low, int high, bool ascending) {
             if (i < j) tukar_jadwal(arr[i], arr[j]);
         }
         tukar_jadwal(arr[j], arr[pivot]);
-        sort_nama(arr, low, j - 1, ascending);
-        sort_nama(arr, j + 1, high, ascending);
+        sort_nama(arr, low, j - 1, asc);
+        sort_nama(arr, j + 1, high, asc);
     }
 }
 
