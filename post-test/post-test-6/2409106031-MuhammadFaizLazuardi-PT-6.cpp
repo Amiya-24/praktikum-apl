@@ -79,7 +79,6 @@ void login() {
         } else {
             cout << "Username atau password salah!\n";
             percobaan++;
-
         }
     }
 
@@ -219,9 +218,7 @@ void hapus_jadwal() {
         } else {
             cout << "Jadwal Tidak Valid!\n";
         }
-
     }
-
 }
 void sorting_jadwal() {
     while (true) {
